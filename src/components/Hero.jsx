@@ -23,7 +23,6 @@ const Hero = () => {
           <h5 className="text-xl tracking-wider">{careerDuration} years of experience</h5>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
             <span className="text-[#915EFF]">Full-Stack Engineer at Keppel, Singapore</span>
-            <span className="xs:hidden md:inline">, passionate about building scalable web and mobile applications.Currently pursuing an MTech in Software Engineering (long-distance) at BITS Pilani.</span>
           </p>
         </div>
       </div>

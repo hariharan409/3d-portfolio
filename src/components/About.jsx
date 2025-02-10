@@ -1,11 +1,11 @@
 import React from "react";
 import Tilt from "react-tilt";
 import { motion } from "framer-motion";
-
 import { styles } from "../styles";
 import { services } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
+import { useSelector } from "react-redux";
 
 const ServiceCard = ({ index, title, icon }) => (
   <Tilt className='xs:w-[250px] w-full'>
@@ -36,6 +36,7 @@ const ServiceCard = ({ index, title, icon }) => (
 );
 
 const About = () => {
+  const careerDuration = useSelector((state) => state.career.careerDuration);
   return (
     <>
       <motion.div variants={textVariant()}>
@@ -47,14 +48,26 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
       >
-        I'm a skilled software developer with experience in TypeScript and
-        JavaScript, and expertise in frameworks like React, Node.js, and
-        Three.js. I'm a quick learner and collaborate closely with clients to
-        create efficient, scalable, and user-friendly solutions that solve
-        real-world problems. Let's work together to bring your ideas to life!
+        <ul className="list-disc marker:text-[#915EFF] pl-5">
+          <li>
+          🚀 Full-Stack Developer with {careerDuration} years of experience at Keppel, Singapore, skilled in React, React Native, Node.js, Java Spring Boot, and AWS. Specializing in scalable web and mobile applications.
+          </li>
+          <li>
+            📚 Currently pursuing MTech in Software Engineering (long-distance) at BITS Pilani, expanding expertise in modern development and cloud computing.
+          </li>
+          <li>
+            🔧 Throughout my career, I have worked on end-to-end development of applications, integrating frontend, backend, and cloud solutions to deliver seamless user experiences. My expertise extends to Redux, React Hook Form, i18n (internationalization), authentication, and API integrations.
+          </li>
+          <li>
+            🌍  As an advocate for open-source development, I have contributed to various npm packages, including my own world-information package, which provides structured geographical data. Additionally, I am working on a customizable React sidebar component to enhance UI/UX in modern applications.
+          </li>
+          <li>
+            💡 My problem-solving skills and deep understanding of software project management help me build robust and maintainable solutions.
+          </li>
+        </ul>
       </motion.p>
 
-      <div className='mt-20 flex flex-wrap gap-10'>
+      <div className='mt-20 flex justify-center overflow-x-auto overflow-y-hidden gap-10 p-6'>
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
         ))}
