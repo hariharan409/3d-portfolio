@@ -1,15 +1,10 @@
 import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { ComputersCanvas } from "./canvas";
-import moment from "moment";
+import { useSelector } from "react-redux";
 
 const Hero = () => {
-  const careerStartedDate = moment(import.meta.env.VITE_CAREER_STARTED_DATE,"DD-MM-YYYY");
-  const currentDate = moment(new Date());
-
-  const monthsDiff = currentDate.diff(careerStartedDate,"months");
-  // Convert months to years with one decimal place
-  const yearsDiff = (monthsDiff / 12).toFixed(1);
+  const careerDuration = useSelector((state) => state.career.careerDuration);
 
   return (
     <section className={`relative w-full h-screen mx-auto`}>
@@ -25,7 +20,7 @@ const Hero = () => {
           <h1 className={`${styles.heroHeadText} text-white`}>
             Hi, I'm <span className='text-[#915EFF]'>Hari</span>
           </h1>
-          <h5 className="text-xl tracking-wider">{yearsDiff} years of experience</h5>
+          <h5 className="text-xl tracking-wider">{careerDuration} years of experience</h5>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
             <span className="text-[#915EFF]">Full-Stack Engineer at Keppel, Singapore</span>
             <span className="xs:hidden md:inline">, passionate about building scalable web and mobile applications.Currently pursuing an MTech in Software Engineering (long-distance) at BITS Pilani.</span>
