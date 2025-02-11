@@ -25,9 +25,13 @@ import mssql from "./tech/mssql.png";
 import postgres from "./tech/postgres.png";
 import aws from "./tech/aws.png";
 
-import carrent from "./carrent.png";
-import jobit from "./jobit.png";
-import tripguide from "./tripguide.png";
+/* List of Certifications */
+import professionalCertificate from "./certification/professional-certificate.png";
+import introductionToTypescript from "./certification/introduction-to-typescript.png";
+import learningAWSLambda from "./certification/learning-aws-lambda.png";
+import learningGit from "./certification/learning-git-github.png";
+
+
 /* List of Companies I Have Worked With (Including My Current Role) */
 import keppel from "./company/keppel.png";
 import inforge from "./company/inforge.jpg";
@@ -52,9 +56,6 @@ export {
   tailwind,
   typescript,
   threejs,
-  carrent,
-  jobit,
-  tripguide,
   hari,
   keppel,
   inforge,
@@ -64,5 +65,10 @@ export {
   springBoot,
   mssql,
   postgres,
-  aws
+  aws,
+  // certificate
+  professionalCertificate,
+  introductionToTypescript,
+  learningAWSLambda,
+  learningGit
 };

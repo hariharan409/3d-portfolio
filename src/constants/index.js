@@ -2,20 +2,12 @@ import {
   web,
   javascript,
   typescript,
-  html,
-  css,
   reactjs,
   redux,
   tailwind,
   nodejs,
   mongodb,
-  git,
   figma,
-  docker,
-  carrent,
-  jobit,
-  tripguide,
-  threejs,
   keppel,
   inforge,
   fiveSixtyDegree,
@@ -23,8 +15,10 @@ import {
   flutter,
   springBoot,
   mssql,
-  postgres,
   aws,
+  introductionToTypescript,
+  learningAWSLambda,
+  learningGit,
 } from "../assets";
 
 export const navLinks = [
@@ -179,70 +173,48 @@ const testimonials = [
   },
 ];
 
-const projects = [
+const certifications = [
   {
-    name: "Car Rent",
+    name: "Introduction To Typescript",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
-    tags: [
+      "The Introduction to TypeScript course from Great Learning covers key concepts like strong typing, classes, interfaces, and OOP, helping developers write scalable, maintainable code for modern web apps.",
+    specialization: [
       {
-        name: "react",
+        name: "typescript",
         color: "blue-text-gradient",
       },
-      {
-        name: "mongodb",
-        color: "green-text-gradient",
-      },
-      {
-        name: "tailwind",
-        color: "pink-text-gradient",
-      },
     ],
-    image: carrent,
-    source_code_link: "https://github.com/",
+    image: introductionToTypescript,
+    certificateLink: "https://www.mygreatlearning.com/academy/learn-for-free/courses/introduction-to-typescript?utm_source=linkedin&utm_medium=linkedin&utm_campaign=linkedin_certificate_share&utm_source_page=public_certificate_view",
   },
   {
-    name: "Job IT",
-    description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
-    tags: [
+    name: "AWS Lambda",
+    description: "The Learning Amazon Web Services Lambda course covers AWS Lambda's core concepts, event-driven architecture, deployment, and integration with AWS services, helping build scalable, serverless applications efficiently.",
+    specialization: [
       {
-        name: "react",
+        name: "aws lambda",
         color: "blue-text-gradient",
       },
-      {
-        name: "restapi",
-        color: "green-text-gradient",
-      },
-      {
-        name: "scss",
-        color: "pink-text-gradient",
-      },
     ],
-    image: jobit,
-    source_code_link: "https://github.com/",
+    image: learningAWSLambda,
+    certificateLink: "https://www.linkedin.com/learning/certificates/0a6ae7aa42ec45e93c335fa1e798e02744066bf327a8995abb876e5d2f197609?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3Bc5SxWybrTCqXsoqpleqFAg%3D%3D",
   },
   {
-    name: "Trip Guide",
-    description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-    tags: [
+    name: "Git and Github",
+    description: "The Learning Git and GitHub course covers version control basics, branching, merging, pull requests, and collaboration using Git and GitHub, enabling efficient code management and teamwork in software development.",
+    specialization: [
       {
-        name: "nextjs",
+        name: "git",
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
+        name: "github",
         color: "green-text-gradient",
       },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
     ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
+    image: learningGit,
+    certificateLink: "https://www.linkedin.com/learning/certificates/f1ba474f9035cdc068efc2a8d3db98fd0ad951a7f5da7caef93802f727b58365?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3Bc5SxWybrTCqXsoqpleqFAg%3D%3D",
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+export { services, technologies, experiences, testimonials, certifications };
