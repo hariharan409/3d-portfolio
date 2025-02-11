@@ -23,6 +23,7 @@ import {
   jobit,
   tripguide,
   threejs,
+  keppel,
 } from "../assets";
 
 export const navLinks = [
@@ -104,16 +105,18 @@ const technologies = [
 
 const experiences = [
   {
-    title: "React.js Developer",
-    company_name: "Starbucks",
-    icon: starbucks,
+    title: "Full Stack Engineer",
+    company_name: "Keppel Corporation Limited",
+    country: "Singapore",
+    icon: keppel,
     iconBg: "#383E56",
-    date: "March 2020 - April 2021",
+    date: "Dec 2023 - Present",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Designing and developing scalable web and mobile applications using React.js and React Native.",
+      "Creating and consuming REST APIs using Node.js, ensuring efficient backend logic and seamless integration with frontend applications.",
+      "Working with MS SQL Server, writing optimized queries, stored procedures, and managing database performance.",
+      "Utilizing AWS services such as S3 for storage, API Gateway for routing, and EC2 for deployment.",
+      "Implementing responsive and interactive UI/UX designs to enhance user experience across web and mobile platforms."
     ],
   },
   {
@@ -153,6 +156,8 @@ const experiences = [
       "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
       "Implementing responsive design and ensuring cross-browser compatibility.",
       "Participating in code reviews and providing constructive feedback to other developers.",
+      "Managing application deployments on AWS, configuring NGINX for server setups, and maintaining CI/CD pipelines.",
+      "Conducting code reviews, providing mentorship, and enforcing best practices for maintainable codebases."
     ],
   },
 ];
