@@ -30,6 +30,8 @@ import professionalCertificate from "./certification/professional-certificate.pn
 import introductionToTypescript from "./certification/introduction-to-typescript.png";
 import learningAWSLambda from "./certification/learning-aws-lambda.png";
 import learningGit from "./certification/learning-git-github.png";
+import learningReduxToolkit from "./certification/learning-redux-toolkit.png";
+import nodejsEssentialTraining from "./certification/nodejs-essential-training.png";
 
 
 /* List of Companies I Have Worked With (Including My Current Role) */
@@ -70,5 +72,7 @@ export {
   professionalCertificate,
   introductionToTypescript,
   learningAWSLambda,
-  learningGit
+  learningGit,
+  learningReduxToolkit,
+  nodejsEssentialTraining
 };

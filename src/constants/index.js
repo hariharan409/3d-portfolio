@@ -19,6 +19,8 @@ import {
   introductionToTypescript,
   learningAWSLambda,
   learningGit,
+  learningReduxToolkit,
+  nodejsEssentialTraining,
 } from "../assets";
 
 export const navLinks = [
@@ -214,6 +216,34 @@ const certifications = [
     ],
     image: learningGit,
     certificateLink: "https://www.linkedin.com/learning/certificates/f1ba474f9035cdc068efc2a8d3db98fd0ad951a7f5da7caef93802f727b58365?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3Bc5SxWybrTCqXsoqpleqFAg%3D%3D",
+  },
+  {
+    name: "Learning Redux Toolkit",
+    description: "The Learning Redux Toolkit course covers state management, reducers, slices, async operations, and best practices, helping developers efficiently manage application state in React using Redux Toolkit.",
+    specialization: [
+      {
+        name: "react.js",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "redux.js",
+        color: "green-text-gradient",
+      },
+    ],
+    image: learningReduxToolkit,
+    certificateLink: "https://www.linkedin.com/learning/certificates/52aae58554d124ae2d06cb030b7ea41b11e5831b5f3fa36dab9972ea72b79f63?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3Bc5SxWybrTCqXsoqpleqFAg%3D%3D",
+  },
+  {
+    name: "Node.js Essential Training",
+    description: "The Node.js Essential Training course covers core Node.js concepts, including asynchronous programming, modules, REST APIs, and database integration, helping developers build scalable and efficient server-side applications.",
+    specialization: [
+      {
+        name: "node.js",
+        color: "blue-text-gradient",
+      },
+    ],
+    image: nodejsEssentialTraining,
+    certificateLink: "https://www.linkedin.com/learning/certificates/59c524b6355ec7e787291b7095581b8ed8c688accb556c161c002cc770021dda?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3Bc5SxWybrTCqXsoqpleqFAg%3D%3D",
   },
 ];
 
