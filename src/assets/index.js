@@ -1,7 +1,6 @@
 import hari from "./hari-pic.jpg";
 import logo from "./logo.svg";
 import web from "./web.png";
-import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
 
@@ -25,6 +24,10 @@ import mssql from "./tech/mssql.png";
 import postgres from "./tech/postgres.png";
 import aws from "./tech/aws.png";
 
+/* List of Companies */
+import github from "./professional-profile/github.png";
+import npm from "./professional-profile/npm.jpg"
+
 /* List of Certifications */
 import professionalCertificate from "./certification/professional-certificate.png";
 import introductionToTypescript from "./certification/introduction-to-typescript.png";
@@ -42,7 +45,6 @@ import fiveSixtyDegree from "./company/560-degree.png";
 export {
   logo,
   web,
-  github,
   menu,
   close,
   css,
@@ -59,20 +61,24 @@ export {
   typescript,
   threejs,
   hari,
-  keppel,
-  inforge,
-  fiveSixtyDegree,
   reactNative,
   flutter,
   springBoot,
   mssql,
   postgres,
   aws,
+  // companies
+  keppel,
+  inforge,
+  fiveSixtyDegree,
   // certificate
   professionalCertificate,
   introductionToTypescript,
   learningAWSLambda,
   learningGit,
   learningReduxToolkit,
-  nodejsEssentialTraining
+  nodejsEssentialTraining,
+  // professional profile
+  github,
+  npm
 };
