@@ -24,11 +24,13 @@ import mssql from "./tech/mssql.png";
 import postgres from "./tech/postgres.png";
 import aws from "./tech/aws.png";
 
-/* List of Companies */
+/* list of profiles */
 import github from "./professional-profile/github.png";
-import npm from "./professional-profile/npm.jpg"
+import npm from "./professional-profile/npm.jpg";
+import stackOverflow from "./professional-profile/stack-overflow.png";
 
-/* List of Certifications */
+
+/* list of certifications */
 import professionalCertificate from "./certification/professional-certificate.png";
 import introductionToTypescript from "./certification/introduction-to-typescript.png";
 import learningAWSLambda from "./certification/learning-aws-lambda.png";
@@ -80,5 +82,6 @@ export {
   nodejsEssentialTraining,
   // professional profile
   github,
-  npm
+  npm,
+  stackOverflow
 };

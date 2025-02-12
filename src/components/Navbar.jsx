@@ -41,7 +41,7 @@ const Navbar = () => {
             window.scrollTo(0, 0);
           }}
         >
-          <img src={hari} alt='logo' className='w-9 h-9 object-contain rounded-[50%]' />
+          <img src={hari} alt='logo' className='w-9 h-9 object-contain rounded-[20%]' />
           <p className='text-white text-[18px] font-bold cursor-pointer flex '>
             Hari &nbsp;
             <span className='sm:block hidden'> | Full Stack Engineer</span>

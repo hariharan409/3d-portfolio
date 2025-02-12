@@ -8,7 +8,7 @@ export const Github = () => {
     const GITHUB_PROFILE_LINK = import.meta.env.VITE_GITHUB_PROFILE_LINK;
     const dispatch = useDispatch();
     const {repoCount,status} = useSelector((state) => state.github);
-    let rightPostion = repoCount.toString().length * 8;
+    let rightPostion = repoCount.toString().length * 10;
 
     useEffect(() => {
         dispatch(fetchMyGithubReposCount(GITHUB_USERNAME));

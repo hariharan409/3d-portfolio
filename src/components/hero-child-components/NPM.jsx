@@ -9,7 +9,7 @@ export const NPM = () => {
     const NPM_PROFILE_LINK = import.meta.env.VITE_NPM_PROFILE_LINK;
     const dispatch = useDispatch();
     const {packageCount,status} = useSelector((state) => state.npm);
-    let rightPostion = packageCount.toString().length * 8;
+    let rightPostion = packageCount.toString().length * 10;
 
     useEffect(() => {
         dispatch(fetchMyNPMPackagesCount(NPM_USERNAME));
