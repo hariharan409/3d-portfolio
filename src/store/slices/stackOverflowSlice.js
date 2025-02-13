@@ -6,7 +6,6 @@ export const fetchReputationCount = createAsyncThunk(
     async(userId) => {
         const response = await fetch(`https://api.stackexchange.com/2.3/users/${userId}?site=stackoverflow`);
         const data = await response.json();
-        console.log(data)
         // Return the count of packages
         return data?.items[0]?.reputation;
     }

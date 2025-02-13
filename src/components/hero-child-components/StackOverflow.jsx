@@ -16,9 +16,9 @@ export const StackOverflow = () => {
     },[dispatch]);
 
     return(
-        <div className="relative cursor-pointer z-20" onClick={() => window.open(STACK_OVERFLOW_PROFILE_LINK,"_blank")}>
-            <img src={stackOverflow} alt='project_image' className='w-9 h-9 object-cover rounded-[50%]' />
-            <div className={`absolute top-[-13px] rounded-[50%] px-[5px] text-[#915EFF]`} style={{right: `-${rightPostion}px`}}>
+        <div className="relative cursor-pointer z-20 animate-bounce" onClick={() => window.open(STACK_OVERFLOW_PROFILE_LINK,"_blank")}>
+            <img src={stackOverflow} alt='project_image' className='w-9 h-9 object-cover rounded-[50%] shadow-lg shadow-[#915EFF] border-4 border-black' />
+            <div className={`absolute top-[-20px] rounded-[50%] px-[5px] text-[#915EFF]`} style={{right: `-${rightPostion}px`}}>
                 {status === "succeeded" && reputationCount}
             </div>
         </div>
