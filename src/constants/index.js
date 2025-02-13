@@ -21,6 +21,15 @@ import {
   learningGit,
   learningReduxToolkit,
   nodejsEssentialTraining,
+  gitIntermediateTechnique,
+  jsDeepLearning,
+  jsEssentialTraining,
+  jsForLogicalThinking,
+  jsProfessionalCertificate,
+  learnJS,
+  problemSolvingCertificate,
+  reactJSCodeChallenge,
+  typescriptForJSDevelopers,
 } from "../assets";
 
 export const navLinks = [
@@ -244,6 +253,141 @@ const certifications = [
     ],
     image: nodejsEssentialTraining,
     certificateLink: "https://www.linkedin.com/learning/certificates/59c524b6355ec7e787291b7095581b8ed8c688accb556c161c002cc770021dda?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3Bc5SxWybrTCqXsoqpleqFAg%3D%3D",
+  },
+
+  {
+    name: "TypeScript for Developers",
+    description: "TypeScript for JavaScript Developers is a course designed to help JavaScript programmers learn TypeScript, covering types, interfaces, generics, and advanced features to build scalable, maintainable code.",
+    specialization: [
+      {
+        name: "javascript",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "typescript",
+        color: "green-text-gradient",
+      },
+    ],
+    image: typescriptForJSDevelopers,
+    certificateLink: "https://www.linkedin.com/learning/certificates/e460c0c3d314198f94e5b50f6a7e3de791258064599c51c4e3c28913a2880821?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BNwhPBRMuRvq7m4rRj2wMXA%3D%3D",
+  },
+
+  {
+    name: "Hacker Rank Problem Solving",
+    description: "HackerRank Problem Solving enhances algorithmic thinking and coding skills through challenges on data structures sorting graph theory and more helping developers improve efficiency and logic.",
+    specialization: [
+      {
+        name: "data structure",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "algorithm",
+        color: "green-text-gradient",
+      },
+    ],
+    image: problemSolvingCertificate,
+    certificateLink: "https://www.hackerrank.com/certificates/156401efb2da",
+  },
+
+  {
+    name: "React.js Code Challenges",
+    description: "React.js Code Challenges helps developers improve their React skills through hands-on coding exercises covering components state props hooks and advanced patterns to build efficient and scalable applications.",
+    specialization: [
+      {
+        name: "react.js",
+        color: "blue-text-gradient",
+      },
+    ],
+    image: reactJSCodeChallenge,
+    certificateLink: "https://www.linkedin.com/learning/certificates/ed6566487f988f70e8d9cd7bdf82c565edf3013e8c0670a390e3f3f1b6224036?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BNwhPBRMuRvq7m4rRj2wMXA%3D%3D",
+  },
+
+  {
+    name: "Git Intermediate Techniques",
+    description: "Git Intermediate Techniques covers branching merging rebasing stash interactive rebase and advanced commit management helping developers enhance their version control skills for efficient collaboration",
+    specialization: [
+      {
+        name: "git",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "version control",
+        color: "green-text-gradient",
+      },
+    ],
+    image: gitIntermediateTechnique,
+    certificateLink: "https://www.linkedin.com/learning/certificates/84e6ec7b8b39fcb84bbcb71fb42f260221e3dd18ea1861c29cf0326e65d449f4?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BNwhPBRMuRvq7m4rRj2wMXA%3D%3D",
+  },
+
+  {
+    name: "JavaScript Essential Training",
+    description: "JavaScript Essential Training covers core concepts like variables functions objects DOM manipulation and asynchronous programming helping developers build dynamic and interactive web applications efficiently",
+    specialization: [
+      {
+        name: "javascript",
+        color: "blue-text-gradient",
+      },
+    ],
+    image: jsEssentialTraining,
+    certificateLink: "https://www.linkedin.com/learning/certificates/7ed5c5ae26231c4bfa02e5dbb42c3cffe3c0ab76a2b15b8069288cd42bca5a34?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BNwhPBRMuRvq7m4rRj2wMXA%3D%3D",
+  },
+
+  {
+    name: "JavaScript Certificate by Mozilla",
+    description: "JavaScript Foundations Professional Certificate by Mozilla covers fundamental JavaScript concepts including variables functions objects and event handling helping developers build interactive and dynamic web applications",
+    specialization: [
+      {
+        name: "javascript",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "web development",
+        color: "green-text-gradient",
+      },
+    ],
+    image: jsProfessionalCertificate,
+    certificateLink: "https://www.linkedin.com/learning/certificates/129bfced981d20a863c24db6356ca597e7b965ea234ae81957c31a7c796ac28d?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BNwhPBRMuRvq7m4rRj2wMXA%3D%3D",
+  },
+
+  {
+    name: "JavaScript: Under the Hood",
+    description: "JavaScript: Under the Hood explores the inner workings of JavaScript including how the engine interprets code memory management event loops and the call stack empowering developers to write more efficient and optimized code.",
+    specialization: [
+      {
+        name: "javascript",
+        color: "blue-text-gradient",
+      },
+    ],
+    image: jsDeepLearning,
+    certificateLink: "https://www.linkedin.com/learning/certificates/1a254590562fdd8da474de477723f5a0ca5d45a0e283e0f3aa6461be8a35ea95?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BNwhPBRMuRvq7m4rRj2wMXA%3D%3D",
+  },
+  {
+    name: "Javascript for Logical Thinking",
+    description: "JavaScript for Logical Thinking and Problem Solving focuses on using JavaScript to develop strong problem-solving skills by covering algorithms, data structures, and logic-based challenges to enhance coding efficiency and clarity.",
+    specialization: [
+      {
+        name: "javascript",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "problem solving",
+        color: "green-text-gradient",
+      },
+    ],
+    image: jsForLogicalThinking,
+    certificateLink: "https://www.udemy.com/certificate/UC-afa7d773-7f7b-4b45-a3e5-ee95c3e1497a/",
+  },
+  {
+    name: "Learning the JavaScript Language",
+    description: "Learning the JavaScript Language covers the fundamentals of JavaScript, including syntax, variables, data types, functions, and control structures, helping developers build a strong foundation for web development.",
+    specialization: [
+      {
+        name: "javascript",
+        color: "blue-text-gradient",
+      },
+    ],
+    image: learnJS,
+    certificateLink: "https://www.linkedin.com/learning/certificates/2a56ed354117b8632e6f60da58051ac62d3a9f79bf534ffb072301bd5e9b7649?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BNwhPBRMuRvq7m4rRj2wMXA%3D%3D",
   },
 ];
 

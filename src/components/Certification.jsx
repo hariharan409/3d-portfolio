@@ -3,7 +3,7 @@ import Tilt from "react-tilt";
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
-import { github, professionalCertificate } from "../assets";
+import { professionalCertificate } from "../assets";
 import { SectionWrapper } from "../hoc";
 import { certifications } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";

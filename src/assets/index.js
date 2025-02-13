@@ -37,6 +37,15 @@ import learningAWSLambda from "./certification/learning-aws-lambda.png";
 import learningGit from "./certification/learning-git-github.png";
 import learningReduxToolkit from "./certification/learning-redux-toolkit.png";
 import nodejsEssentialTraining from "./certification/nodejs-essential-training.png";
+import gitIntermediateTechnique from "./certification/git-intermediate-technique.png";
+import jsDeepLearning from "./certification/js-deep-learning.png";
+import jsEssentialTraining from "./certification/js-essential-training.png";
+import jsForLogicalThinking from "./certification/js-for-logical-thinking.png";
+import jsProfessionalCertificate from "./certification/js-professional-certificate.png";
+import learnJS from "./certification/learn-js.png";
+import problemSolvingCertificate from "./certification/problem-solving-certificate.png";
+import reactJSCodeChallenge from "./certification/react-js-code-challenge.png";
+import typescriptForJSDevelopers from "./certification/typescript-for-js-developers.png";
 
 
 /* List of Companies I Have Worked With (Including My Current Role) */
@@ -80,6 +89,15 @@ export {
   learningGit,
   learningReduxToolkit,
   nodejsEssentialTraining,
+  gitIntermediateTechnique,
+  jsDeepLearning,
+  jsEssentialTraining,
+  jsForLogicalThinking,
+  jsProfessionalCertificate,
+  learnJS,
+  problemSolvingCertificate,
+  reactJSCodeChallenge,
+  typescriptForJSDevelopers,
   // professional profile
   github,
   npm,
