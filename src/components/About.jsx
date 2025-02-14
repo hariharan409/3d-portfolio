@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Tilt from "react-tilt";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
@@ -10,7 +10,7 @@ import { myAIVideo } from "../assets";
 import { VideoPlayer } from "./VideoPlayer";
 import { HeartIcon as HeartOutline } from "@heroicons/react/24/outline";
 import { HeartIcon as HeartSolid } from "@heroicons/react/24/solid";
-import { updateLikes } from "../store/slices/githubSlice";
+import { fetchMyAppLikeCount, updateLikes, updateMyAppLikeCount } from "../store/slices/githubSlice";
 
 const ServiceCard = ({ index, title, icon }) => (
   <Tilt className='xs:w-[250px] w-full'>
@@ -33,6 +33,15 @@ const About = () => {
   const dispatch = useDispatch();
   const careerDuration = useSelector((state) => state.career.careerDuration);
   const {isLiked,likeCount} = useSelector((state) => state.github);
+
+  useEffect(() => {
+    dispatch(fetchMyAppLikeCount()); // Fetch like count from GitHub on component mount
+  }, [dispatch]);
+
+  const handleLike = (count) => {
+    const newLikeCount = count;
+    dispatch(updateMyAppLikeCount(newLikeCount));
+  }
 
   return (
     <>
@@ -68,11 +77,11 @@ const About = () => {
         <VideoPlayer file={myAIVideo} />
         <div className="flex items-center gap-x-4">
           <span className="font-bold">Tap to give your support!</span>
-          <button className="mr-5 flex items-center" onClick={() => dispatch(updateLikes())}>
+          <button className="mr-5 flex items-center">
               {
                 isLiked
-                ? <HeartSolid className="w-7 h-7 text-red-600" />
-                : <HeartOutline className="w-7 h-7 text-gray-400 animate-pulse" />
+                ? <HeartSolid className="w-7 h-7 text-red-600" onClick={() => handleLike(likeCount - 1)}/>
+                : <HeartOutline className="w-7 h-7 text-gray-400 animate-pulse" onClick={() => handleLike(likeCount + 1)}/>
               }<span className="text-base">({likeCount})</span>
           </button>
         </div>
