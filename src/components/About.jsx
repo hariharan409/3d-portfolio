@@ -5,9 +5,12 @@ import { styles } from "../styles";
 import { services } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { myAIVideo } from "../assets";
 import { VideoPlayer } from "./VideoPlayer";
+import { HeartIcon as HeartOutline } from "@heroicons/react/24/outline";
+import { HeartIcon as HeartSolid } from "@heroicons/react/24/solid";
+import { updateLikes } from "../store/slices/githubSlice";
 
 const ServiceCard = ({ index, title, icon }) => (
   <Tilt className='xs:w-[250px] w-full'>
@@ -16,29 +19,21 @@ const ServiceCard = ({ index, title, icon }) => (
       className='w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card'
     >
       <div
-        options={{
-          max: 45,
-          scale: 1,
-          speed: 450,
-        }}
+        options={{max: 45,scale: 1,speed: 450}}
         className='bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col'
       >
-        <img
-          src={icon}
-          alt='web-development'
-          className='w-16 h-16 object-contain'
-        />
-
-        <h3 className='text-white text-[20px] font-bold text-center'>
-          {title}
-        </h3>
+        <img src={icon} alt='web-development' className='w-16 h-16 object-contain' />
+        <h3 className='text-white text-[20px] font-bold text-center'>{title}</h3>
       </div>
     </motion.div>
   </Tilt>
 );
 
 const About = () => {
+  const dispatch = useDispatch();
   const careerDuration = useSelector((state) => state.career.careerDuration);
+  const {isLiked,likeCount} = useSelector((state) => state.github);
+
   return (
     <>
       <motion.div variants={textVariant()}>
@@ -71,7 +66,16 @@ const About = () => {
 
       <div className="w-full mt-20 flex flex-col justify-center items-center gap-y-10">
         <VideoPlayer file={myAIVideo} />
-        <h4>Click the like button to show your support!</h4>
+        <div className="flex items-center gap-x-4">
+          <span className="font-bold">Tap to give your support!</span>
+          <button className="mr-5 flex items-center" onClick={() => dispatch(updateLikes())}>
+              {
+                isLiked
+                ? <HeartSolid className="w-7 h-7 text-red-600" />
+                : <HeartOutline className="w-7 h-7 text-gray-400 animate-pulse" />
+              }<span className="text-base">({likeCount})</span>
+          </button>
+        </div>
       </div>
 
       <div className='mt-20 flex justify-center overflow-x-auto overflow-y-hidden gap-10 p-6'>

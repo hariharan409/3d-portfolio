@@ -15,24 +15,34 @@ const githubSlice = createSlice({
     name: "github",
     initialState: {
         repoCount: 0,  // For storing the repository count
-        status: 'idle',  // For tracking the request status
+        isLiked: false,
+        likeCount: 25,
+        status: {
+            repoCount: 'idle',  // For tracking the request status
+        },
         error: null,  // For tracking errors
     },
-    reducers: {},
+    reducers: {
+        updateLikes: (state) => {
+            state.isLiked = !state.isLiked;
+            state.isLiked ? state.likeCount += 1 : state.likeCount -= 1;
+        }
+    },
     extraReducers: (builder) => {
         builder
         .addCase(fetchMyGithubReposCount.pending,(state) => {
-            state.status = "loading";
+            state.status.repoCount = "loading";
         })
         .addCase(fetchMyGithubReposCount.fulfilled,(state,action) => {
-            state.status = "succeeded";
+            state.status.repoCount = "succeeded";
             state.repoCount = action.payload; // Set the repository count
         })
         .addCase(fetchMyGithubReposCount.rejected,(state,action) => {
-            state.status = 'failed';
+            state.status.repoCount = 'failed';
             state.error = action.error.message;
         })
     }
 });
 
+export const {updateLikes} = githubSlice.actions;
 export default githubSlice.reducer;
