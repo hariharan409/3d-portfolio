@@ -53,6 +53,9 @@ import keppel from "./company/keppel.png";
 import inforge from "./company/inforge.jpg";
 import fiveSixtyDegree from "./company/560-degree.png";
 
+// videos
+import myAIVideo from "./video/about-me-ai-video.mp4";
+
 export {
   logo,
   web,
@@ -101,5 +104,8 @@ export {
   // professional profile
   github,
   npm,
-  stackOverflow
+  stackOverflow,
+
+  // video
+  myAIVideo
 };

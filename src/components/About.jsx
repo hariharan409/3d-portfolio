@@ -6,6 +6,8 @@ import { services } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
 import { useSelector } from "react-redux";
+import { myAIVideo } from "../assets";
+import { VideoPlayer } from "./VideoPlayer";
 
 const ServiceCard = ({ index, title, icon }) => (
   <Tilt className='xs:w-[250px] w-full'>
@@ -66,6 +68,11 @@ const About = () => {
           </li>
         </ul>
       </motion.p>
+
+      <div className="w-full mt-20 flex flex-col justify-center items-center gap-y-10">
+        <VideoPlayer file={myAIVideo} />
+        <h4>Click the like button to show your support!</h4>
+      </div>
 
       <div className='mt-20 flex justify-center overflow-x-auto overflow-y-hidden gap-10 p-6'>
         {services.map((service, index) => (
