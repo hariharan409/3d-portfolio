@@ -82,8 +82,8 @@ const About = () => {
                 ? <HeartSolid className="w-16 h-16 text-red-600" onClick={() => handleLike(likeCount - 1)}/>
                 : <HeartOutline className="w-16 h-16 text-gray-400 animate-pulse" onClick={() => handleLike(likeCount + 1)}/>
               }
-              {
-                (status.getLikeCount !== "succeeded" || status.updateLikeCount !== "succeeded")
+              { 
+                (status.getLikeCount === "loading" || status.updateLikeCount === "loading")
                 ? <div class="absolute top-[-4px] right-0 flex justify-center items-center">
                     <div class="w-5 h-5 border-4 border-t-transparent border-blue-500 border-solid rounded-full animate-spin"></div>
                 </div>
