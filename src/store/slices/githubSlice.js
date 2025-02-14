@@ -16,8 +16,7 @@ export const fetchMyAppLikeCount = createAsyncThunk(
     'github/fetchMyAppLikeCount',
     async () => {
       try {
-        const response = await fetch(`https://api.github.com/repos/hariharan409/3d-portfolio/contents/likes.json`);
-  
+        const response = await fetch(import.meta.env.VITE_GITHUB_USER_INTERACTIONS_JSON_URL);
         const data = await response.json();
         const decodedContent = atob(data.content);
         return JSON.parse(decodedContent).count; // Return the like count
@@ -40,14 +39,14 @@ export const updateMyAppLikeCount  = createAsyncThunk(
             const encodedContent = btoa(JSON.stringify(newContent));
         
             // Fetch the current SHA of the file to make the update
-            const response = await fetch(`https://api.github.com/repos/hariharan409/3d-portfolio/contents/likes.json`);
+            const response = await fetch(import.meta.env.VITE_GITHUB_USER_INTERACTIONS_JSON_URL);
 
             const data = await response.json();
             const sha = data.sha;
 
             // Now update the file with the new like count
             await fetch(
-                `https://api.github.com/repos/hariharan409/3d-portfolio/contents/likes.json`,
+                import.meta.env.VITE_GITHUB_USER_INTERACTIONS_JSON_URL,
                 {
                     method: 'PUT',
                     headers: {
@@ -58,10 +57,11 @@ export const updateMyAppLikeCount  = createAsyncThunk(
                         message: 'Updated like status for the text-to-video voice-over.',
                         content: encodedContent,
                         sha: sha,
-                        branch: "master",
+                        branch: import.meta.env.VITE_GITHUB_BRANCH,
                     }),
                 }
             );
+            fetchMyAppLikeCount();
         } catch (error) {
             console.error('Error updating like count:', error);
         }
