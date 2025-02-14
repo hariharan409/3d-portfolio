@@ -10,7 +10,7 @@ import { myAIVideo } from "../assets";
 import { VideoPlayer } from "./VideoPlayer";
 import { HeartIcon as HeartOutline } from "@heroicons/react/24/outline";
 import { HeartIcon as HeartSolid } from "@heroicons/react/24/solid";
-import { fetchMyAppLikeCount, updateLikes, updateMyAppLikeCount } from "../store/slices/githubSlice";
+import { fetchMyAppLikeCount, updateMyAppLikeCount } from "../store/slices/githubSlice";
 
 const ServiceCard = ({ index, title, icon }) => (
   <Tilt className='xs:w-[250px] w-full'>
@@ -32,13 +32,13 @@ const ServiceCard = ({ index, title, icon }) => (
 const About = () => {
   const dispatch = useDispatch();
   const careerDuration = useSelector((state) => state.career.careerDuration);
-  const {isLiked,likeCount} = useSelector((state) => state.github);
+  const {isLiked,likeCount,status} = useSelector((state) => state.github);
 
   useEffect(() => {
     dispatch(fetchMyAppLikeCount()); // Fetch like count from GitHub on component mount
   }, [dispatch]);
 
-  const handleLike = (count) => {
+  const handleLike = async(count) => {
     const newLikeCount = count;
     dispatch(updateMyAppLikeCount(newLikeCount));
   }
@@ -75,14 +75,20 @@ const About = () => {
 
       <div className="w-full mt-20 flex flex-col justify-center items-center gap-y-10">
         <VideoPlayer file={myAIVideo} />
-        <div className="flex items-center gap-x-4">
-          <span className="font-bold">Tap to give your support!</span>
+        <div className="relative flex items-center">
           <button className="mr-5 flex items-center">
               {
                 isLiked
-                ? <HeartSolid className="w-7 h-7 text-red-600" onClick={() => handleLike(likeCount - 1)}/>
-                : <HeartOutline className="w-7 h-7 text-gray-400 animate-pulse" onClick={() => handleLike(likeCount + 1)}/>
-              }<span className="text-base">({likeCount})</span>
+                ? <HeartSolid className="w-16 h-16 text-red-600" onClick={() => handleLike(likeCount - 1)}/>
+                : <HeartOutline className="w-16 h-16 text-gray-400 animate-pulse" onClick={() => handleLike(likeCount + 1)}/>
+              }
+              {
+                (status.getLikeCount !== "succeeded" || status.updateLikeCount !== "succeeded")
+                ? <div class="absolute top-[-4px] right-0 flex justify-center items-center">
+                    <div class="w-5 h-5 border-4 border-t-transparent border-blue-500 border-solid rounded-full animate-spin"></div>
+                </div>
+                : <span className="absolute top-[-4px] right-0 text-lg">{likeCount}</span>
+              }
           </button>
         </div>
       </div>

@@ -4,10 +4,14 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 export const fetchMyGithubReposCount = createAsyncThunk(
     'github/fetchMyGithubReposCount',
     async(userName) => {
-        const response = await fetch(`https://api.github.com/users/${userName}/repos`);
-        const data = await response.json();
-        // Return the count of repositories
-        return data.length;
+        try {
+            const response = await fetch(`https://api.github.com/users/${userName}/repos`);
+            const data = await response.json();
+            // Return the count of repositories
+            return data.length;
+        } catch (error) {
+            console.error('Error fetching repo count:', error);
+        }
     }
 );
 
@@ -22,7 +26,6 @@ export const fetchMyAppLikeCount = createAsyncThunk(
         return JSON.parse(decodedContent).likeCount; // Return the like count
       } catch (error) {
         console.error('Error fetching like count:', error);
-        return 0; // Default to 0 if an error occurs
       }
     }
   );
@@ -61,7 +64,7 @@ export const updateMyAppLikeCount  = createAsyncThunk(
                     }),
                 }
             );
-            fetchMyAppLikeCount();
+            return count;
         } catch (error) {
             console.error('Error updating like count:', error);
         }
@@ -73,7 +76,7 @@ const githubSlice = createSlice({
     initialState: {
         repoCount: 0,  // For storing the repository count
         isLiked: false,
-        likeCount: 0,
+        likeCount: null,
         status: {
             repoCount: 'idle',  // For tracking the request status
             getLikeCount: 'idle',
@@ -102,7 +105,7 @@ const githubSlice = createSlice({
         })
         .addCase(fetchMyAppLikeCount.fulfilled,(state,action) => {
             state.status.getLikeCount = "succeeded";
-            state.likeCount = action.payload; // Set the repository count
+            state.likeCount = action.payload; // Set the like count
         })
         .addCase(fetchMyAppLikeCount.rejected,(state,action) => {
             state.status.getLikeCount = 'failed';
@@ -115,7 +118,7 @@ const githubSlice = createSlice({
         .addCase(updateMyAppLikeCount.fulfilled,(state,action) => {
             state.isLiked = !state.isLiked;
             state.status.updateLikeCount = "succeeded";
-            state.likeCount = action.payload; // Set the repository count
+            state.likeCount = action.payload; // Set the like count
         })
         .addCase(updateMyAppLikeCount.rejected,(state,action) => {
             state.status.updateLikeCount = 'failed';
@@ -124,5 +127,4 @@ const githubSlice = createSlice({
     }
 });
 
-export const {updateLikes} = githubSlice.actions;
 export default githubSlice.reducer;
