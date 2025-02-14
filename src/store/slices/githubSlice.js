@@ -19,7 +19,7 @@ export const fetchMyAppLikeCount = createAsyncThunk(
         const response = await fetch(import.meta.env.VITE_GITHUB_USER_INTERACTIONS_JSON_URL);
         const data = await response.json();
         const decodedContent = atob(data.content);
-        return JSON.parse(decodedContent).count; // Return the like count
+        return JSON.parse(decodedContent).likeCount; // Return the like count
       } catch (error) {
         console.error('Error fetching like count:', error);
         return 0; // Default to 0 if an error occurs
@@ -33,7 +33,7 @@ export const updateMyAppLikeCount  = createAsyncThunk(
     async(count) => {
         try {
             // Prepare the new content for the file
-            const newContent = {count: count};
+            const newContent = {likeCount: count};
         
             // Encode the content in base64
             const encodedContent = btoa(JSON.stringify(newContent));
@@ -73,7 +73,7 @@ const githubSlice = createSlice({
     initialState: {
         repoCount: 0,  // For storing the repository count
         isLiked: false,
-        likeCount: 1,
+        likeCount: 0,
         status: {
             repoCount: 'idle',  // For tracking the request status
             getLikeCount: 'idle',
