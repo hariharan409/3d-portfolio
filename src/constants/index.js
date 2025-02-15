@@ -30,6 +30,10 @@ import {
   problemSolvingCertificate,
   reactJSCodeChallenge,
   typescriptForJSDevelopers,
+  brindhan,
+  krishna,
+  manikandan,
+  kishore,
 } from "../assets";
 
 export const navLinks = [
@@ -157,30 +161,38 @@ const experiences = [
   },
 ];
 
-const testimonials = [
+const mentors = [
   {
-    testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
+    description:
+      "Brindhan Settu is the Founder & Managing Director of Inforge Technologies, with vast experience in project management and development. From him, I learned how to handle complex logics efficiently and, beyond work, gained valuable behavioral skills that have shaped my professional growth.",
+    name: "Brindhan",
+    designation: "CEO",
+    company: "Inforge Technologies pvt ltd - coimbatore/india",
+    image: brindhan,
   },
   {
-    testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
+    description:
+      "Krishna Thivakar is the Technical Team Lead at Inforge Technologies, with extensive experience in full-stack development and debugging. From him, I learned advanced coding skills and problem-solving techniques, while also gaining valuable insights into efficient software development practices that have significantly shaped my technical growth.",
+    name: "Krishna Thivakar",
+    designation: "TL",
+    company: "Inforge Technologies pvt ltd - coimbatore/india",
+    image: krishna,
   },
   {
-    testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
+    description:
+      "Kishore Kumar is the Technical Team Lead at Inforge Technologies, he mentored me in data structures and algorithms, improving my programming and mobile app dev skills. His guidance on applying efficient algorithms in real-world projects has been key to my growth in backend and mobile app development.",
+    name: "Kishore Kumar",
+    designation: "TL",
+    company: "Inforge Technologies pvt ltd - coimbatore/india",
+    image: kishore,
+  },
+  {
+    description:
+      "Manikandan Balasubramanian is the Senior Manager at Seatrium and an ex-Software Engineer, with vast experience in leadership, IT environments, and database queries. From him, I learned valuable leadership skills and expertise in DB queries, and beyond work, he has helped me with personal growth, shaping my overall development.",
+    name: "Manikandan",
+    designation: "Senior Manager",
+    company: "Keppel & Seatrium - Singapore",
+    image: manikandan,
   },
 ];
 
@@ -391,4 +403,4 @@ const certifications = [
   },
 ];
 
-export { services, technologies, experiences, testimonials, certifications };
+export { services, technologies, experiences, mentors, certifications };

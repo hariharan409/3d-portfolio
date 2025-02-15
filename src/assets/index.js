@@ -56,6 +56,12 @@ import fiveSixtyDegree from "./company/560-degree.png";
 // videos
 import myAIVideo from "./video/about-me-ai-video.mp4";
 
+/* my mentors and managers who shaped me */
+import brindhan from "./project-manager/brindhan-inforge.jpg";
+import krishna from "./project-manager/krishna-inforge.jpg";
+import kishore from "./project-manager/kishore-inforge.jpg";
+import manikandan from "./project-manager/mani-keppel.jpg";
+
 export {
   logo,
   web,
@@ -107,5 +113,11 @@ export {
   stackOverflow,
 
   // video
-  myAIVideo
+  myAIVideo,
+
+  // mentors
+  brindhan,
+  krishna,
+  manikandan,
+  kishore
 };

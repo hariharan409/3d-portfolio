@@ -5,7 +5,7 @@ import About from "./About";
 import Tech from "./Tech";
 import Experience from "./Experience";
 import Certification from "./Certification";
-import Feedbacks from "./Feedbacks";
+import Mentor from "./Mentor";
 import Contact from "./Contact";
 import CanvasLoader from "./Loader";
 
@@ -17,7 +17,7 @@ export {
   Tech,
   Experience,
   Certification,
-  Feedbacks,
+  Mentor,
   Contact,
   CanvasLoader,
   EarthCanvas, 
