@@ -30,7 +30,9 @@ const FlyingButterflies = () => {
                     }}
                     style={{ position: "absolute", width: butterfly.size, height: butterfly.size }}
                     >
-                    <BirdAnimation  width={"50px"} height={"50px"}/>
+                    <div className="w-[50px] h-[50px]">
+                        <BirdAnimation />
+                    </div>
                     </motion.div>
                 ))
             }

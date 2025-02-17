@@ -64,6 +64,7 @@ import manikandan from "./project-manager/mani-keppel.jpg";
 
 /* lottie animation */
 import birdAnimation from "./lottie/bird.json";
+import monkeyAnimation from "./lottie/monkey.json";
 
 export {
   logo,
@@ -125,5 +126,6 @@ export {
   kishore,
 
   // lottie
-  birdAnimation
+  birdAnimation,
+  monkeyAnimation
 };
