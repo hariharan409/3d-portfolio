@@ -42,7 +42,7 @@ const Navbar = () => {
           }}
         >
           <img src={hari} alt='logo' className='w-9 h-9 object-contain rounded-[20%]' />
-          <div>
+          <div className="animate-pulse">
             <p className='text-white text-[18px] font-bold cursor-pointer flex '>
               Hari &nbsp;
               <span className='sm:block hidden'> | Full Stack Engineer</span>

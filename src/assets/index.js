@@ -62,6 +62,9 @@ import krishna from "./project-manager/krishna-inforge.jpg";
 import kishore from "./project-manager/kishore-inforge.jpg";
 import manikandan from "./project-manager/mani-keppel.jpg";
 
+/* lottie animation */
+import birdAnimation from "./lottie/bird.json";
+
 export {
   logo,
   web,
@@ -119,5 +122,8 @@ export {
   brindhan,
   krishna,
   manikandan,
-  kishore
+  kishore,
+
+  // lottie
+  birdAnimation
 };

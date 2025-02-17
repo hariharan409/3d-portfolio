@@ -9,7 +9,6 @@ import { certifications } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 
 const CertificationCard = ({
-  index,
   name,
   description,
   specialization,
@@ -17,7 +16,7 @@ const CertificationCard = ({
   certificateLink,
 }) => {
   return (
-    <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
+    <motion.div>
       <Tilt
         options={{
           max: 45,
@@ -88,7 +87,7 @@ const Certification = () => {
 
       <div className='mt-20 flex flex-wrap gap-7'>
         {certifications.map((certificate, index) => (
-          <CertificationCard key={`project-${index}`} index={index} {...certificate} />
+          <CertificationCard key={`project-${index}`} {...certificate} />
         ))}
       </div>
     </>

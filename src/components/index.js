@@ -8,7 +8,7 @@ import Certification from "./Certification";
 import Mentor from "./Mentor";
 import Contact from "./Contact";
 import CanvasLoader from "./Loader";
-
+import FlyingButterflies from './FlyingButterflies';
 
 export {
   Hero,
@@ -23,5 +23,6 @@ export {
   EarthCanvas, 
   BallCanvas, 
   ComputersCanvas, 
-  StarsCanvas
+  StarsCanvas,
+  FlyingButterflies
 };
