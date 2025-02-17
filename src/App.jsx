@@ -21,7 +21,7 @@ const App = () => {
         </div>
         {/* monkey animation */}
         <div className="fixed top-20 right-[-15px] z-10">
-          <div className="xs:w-[130px] md:w-[200px] xl:w-[300px]">
+          <div className="w-[130px] md:w-[200px] xl:w-[300px]">
             <MonkeyAnimation />
           </div>
         </div>
