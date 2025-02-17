@@ -69,16 +69,13 @@ const CertificationCard = ({
 const Certification = () => {
   return (
     <>
-      <motion.div variants={textVariant()}>
+      <motion.div>
         <p className={`${styles.sectionSubText} `}>Career highlights</p>
         <h2 className={`${styles.sectionHeadText}`}>Certifications.</h2>
       </motion.div>
 
       <div className='w-full flex'>
-        <motion.p
-          variants={fadeIn("", "", 0.1, 1)}
-          className='mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]'
-        >
+        <motion.p className='mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]'>
           Throughout my career, I have actively pursued professional development and earned several certifications in key areas. 
           Below is a list of the certifications I have completed, along with the attached certificate links for verification. 
           These certifications reflect my commitment to enhancing my skills and staying up-to-date with industry standards.
