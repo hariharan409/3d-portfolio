@@ -166,7 +166,7 @@ const mentors = [
     description:
       "Brindhan Settu is the Founder & Managing Director of Inforge Technologies, with vast experience in project management and development. From him, I learned how to handle complex logics efficiently and, beyond work, gained valuable behavioral skills that have shaped my professional growth.",
     name: "Brindhan",
-    designation: "CEO",
+    designation: "MD/CEO",
     company: "Inforge Technologies pvt ltd - coimbatore/india",
     image: brindhan,
   },
