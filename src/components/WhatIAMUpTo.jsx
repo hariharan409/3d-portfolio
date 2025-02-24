@@ -19,9 +19,6 @@ const WhatIAMUpTo = () => {
                 <h5 className="inline-flex items-center mb-4 text-base font-semibold text-[#915EFF]">
                     "Ongoing Projects" / "Learning & Exploring"
                 </h5>
-                <button type="button" className="bg-transparent rounded-lg text-sm w-8 h-8 absolute top-2.5 right-2.5 hover:bg-white hover:text-black" onClick={() => setIsOpen(false)}>
-                    ✖
-                </button>
                 <ul className="list-disc marker:text-[#915EFF] pl-5">
                     <li>
                         Developing Harvest Hub App – Building an app for farmers to manage their expenses and workflow efficiently. Enhancing AI capabilities to provide smart prompts and assist with decision-making.
@@ -36,6 +33,11 @@ const WhatIAMUpTo = () => {
                         Pursuing M.Tech in Software Engineering – Currently enrolled in the M.Tech Software Engineering program at BITS Pilani as a long distance course to deepen my expertise in software development and project management.
                     </li>
                 </ul>
+                <div className="flex justify-center mt-4">
+                    <button type='button' className='bg-tertiary hover:bg-white  py-1 px-5 rounded-sm outline-none w-fit text-white hover:text-black font-bold shadow-md shadow-primary' onClick={() => setIsOpen(false)}>
+                        Close
+                    </button>
+                </div>
             </div> 
         </div>
     );
