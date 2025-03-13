@@ -10,6 +10,7 @@ import Contact from "./Contact";
 import CanvasLoader from "./Loader";
 import Footer from './Footer';
 import WhatIAMUpTo from './WhatIAMUpTo';
+import Project from "./Project";
 
 export {
   Hero,
@@ -26,5 +27,6 @@ export {
   ComputersCanvas, 
   StarsCanvas,
   Footer,
-  WhatIAMUpTo
+  WhatIAMUpTo,
+  Project
 };

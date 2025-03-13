@@ -1,5 +1,5 @@
 import { BrowserRouter } from "react-router-dom";
-import { About, Contact, Experience, Hero, Navbar, Tech, Certification, StarsCanvas, Mentor, Footer } from "./components";
+import { About, Contact, Experience, Hero, Navbar, Tech, Certification, StarsCanvas, Mentor, Footer, Project } from "./components";
 import { MonkeyAnimation } from "./components/lottie-animation/LottieComponent";
 
 const App = () => {
@@ -11,6 +11,7 @@ const App = () => {
           <Hero />
         </div>
         <About />
+        <Project />
         <Experience />
         <Tech />
         <Certification />

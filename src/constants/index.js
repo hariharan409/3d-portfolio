@@ -403,4 +403,23 @@ const certifications = [
   },
 ];
 
-export { services, technologies, experiences, mentors, certifications };
+const projects = [
+  {
+    name: "gift management",
+    duration: "Aug 2024 - Jan 2024",
+    description: "The **Gift & Hospitality Management App** streamlines multi-level approvals with real-time tracking and a sleek **React Native Paper UI**. Built with **React Native & Expo**, it supports multilingual features and runs seamlessly on web and mobile. 🚀",
+    videoUrl: "https://www.loom.com/share/b651cbf5eef247c0a717dcf3acd53f4c",
+    videoGif: "https://cdn.loom.com/sessions/thumbnails/b651cbf5eef247c0a717dcf3acd53f4c-4de5195a44975f41-full-play.gif",
+    techStack: ["react native","redux toolkit","node js","express js","mssql","aws"]
+  },
+  {
+    name: "harvest hub",
+    duration: "Jan 2024 - Present",
+    description: "The **Harvest Hub App** streamlines farm management by tracking crops, yield, market trends, and climate details in real-time. It provides an intuitive interface for farmers to monitor and optimize their agricultural operations efficiently. 🚀",
+    videoUrl: "https://www.loom.com/share/6e674ca346634efbb79ee4bb1aefc794",
+    videoGif: "https://cdn.loom.com/sessions/thumbnails/6e674ca346634efbb79ee4bb1aefc794-7f1d275db2a93d01-full-play.gif",
+    techStack: ["react js","redux toolkit","node js","express js","mongo db","vercel"]
+  }
+]
+
+export { services, technologies, experiences, mentors, certifications,projects };
