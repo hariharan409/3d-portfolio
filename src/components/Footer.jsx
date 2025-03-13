@@ -1,4 +1,5 @@
 import moment from "moment";
+import {version} from "../../package.json";
 
 
 const Footer = () => {
@@ -7,7 +8,7 @@ const Footer = () => {
     return(
             <div className="text-center">
                 <span className="text-xs text-gray-300">
-                    @ {year} <span className="hover:underline text-[#915EFF]">Blackcode {'</>💻'}</span>. All Rights Reserved.
+                    @ {year} V-{version} <span className="hover:underline text-[#915EFF]">Blackcode {'</>💻'}</span>. All Rights Reserved.
                 </span>
             </div>
     )
