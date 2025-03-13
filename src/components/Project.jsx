@@ -1,10 +1,11 @@
-import Tilt from "react-tilt";
+import {Tilt} from "react-tilt";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
+import { ScratchToReveal } from "@/components/magicui/scratch-to-reveal";
 
-const CertificationCard = ({
+const ProjectCard = ({
   name,
   duration,
   description,
@@ -13,12 +14,19 @@ const CertificationCard = ({
   techStack
 }) => {
   return (
-    <motion.div>
-      <Tilt options={{max: 45,scale: 1,speed: 450}} className='bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full'>
+    <div className="bg-tertiary sm:w-[360px] w-full h-full p-5">
         <div className='relative w-full h-[230px]'>
-          <a target="_blank" href={videoUrl}>
-            <img src={videoGif} autoPlay loop muted playsInline alt='project_image' className='w-full h-full object-cover rounded-2xl'/>
-          </a>
+          <ScratchToReveal
+            width={325}
+            height={240}
+            minScratchPercentage={70}
+            className="rounded-2xl"
+            gradientColors={["#A97CF8", "#F38CB8", "#FDCC92"]}
+          >
+            <a target="_blank" href={videoUrl}>
+              <img src={videoGif} autoPlay loop muted playsInline alt='project_image' className='w-full h-full object-cover rounded-2xl'/>
+            </a>
+            </ScratchToReveal>
         </div>
         <div>
       </div>
@@ -32,14 +40,13 @@ const CertificationCard = ({
           {techStack.map((tech) => (
             <p
               key={`${tech}`}
-              className={`text-[14px]`}
+              className={`text-secondary text-[14px]`}
             >
               #{tech}
             </p>
           ))}
         </div>
-      </Tilt>
-    </motion.div>
+    </div>
   );
 };
 
@@ -58,10 +65,9 @@ const Project = () => {
                 I've worked on a variety of projects, from simple websites to complex web applications. Here are a few of my favorites.
             </motion.p>
           </div>
-    
-          <div className='mt-20 flex flex-wrap gap-7'>
+            <div className='mt-20 flex flex-wrap gap-7'>
             {projects.map((project, index) => (
-              <CertificationCard key={`project-${index}`} {...project} />
+                <ProjectCard key={`project-${index}`} {...project} />
             ))}
           </div>
         </>
