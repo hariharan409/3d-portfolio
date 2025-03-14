@@ -4,6 +4,7 @@ import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
 import { ScratchToReveal } from "@/components/magicui/scratch-to-reveal";
+import { Particles } from "@/components/magicui/particles";
 
 const ProjectCard = ({
   name,
@@ -14,7 +15,14 @@ const ProjectCard = ({
   techStack
 }) => {
   return (
-    <div className="bg-tertiary sm:w-[360px] w-full h-full p-5">
+    <div className="relative sm:w-[360px] w-full h-full p-4 border-[2px] rounded-lg border-[#434343]">
+        <Particles
+          className="absolute inset-0 z-0"
+          quantity={200}
+          ease={80}
+          color="#ffffff"
+          refresh
+        />
         <div className='relative w-full h-[230px]'>
           <ScratchToReveal
             width={325}
@@ -39,8 +47,8 @@ const ProjectCard = ({
         <div className='mt-4 flex flex-wrap gap-2'>
           {techStack.map((tech) => (
             <p
-              key={`${tech}`}
-              className={`text-secondary text-[14px]`}
+            key={`${tech}`}
+            className={`text-secondary text-[14px]`}
             >
               #{tech}
             </p>
