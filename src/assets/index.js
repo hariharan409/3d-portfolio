@@ -52,6 +52,8 @@ import typescriptForJSDevelopers from "./certification/typescript-for-js-develop
 import keppel from "./company/keppel.png";
 import inforge from "./company/inforge.jpg";
 import fiveSixtyDegree from "./company/560-degree.png";
+import seatrium from "./company/seatrium.png";
+import apar from "./company/apar.png";
 
 // videos
 import myAIVideo from "./video/about-me-ai-video.mp4";
@@ -95,6 +97,8 @@ export {
   keppel,
   inforge,
   fiveSixtyDegree,
+  seatrium,
+  apar,
   // certificate
   professionalCertificate,
   introductionToTypescript,

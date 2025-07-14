@@ -24,7 +24,7 @@ const Hero = () => {
           </h1>
           <h5 className="text-xl tracking-wider">{careerDuration} years of experience</h5>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            <span className="text-[#915EFF]">Full-Stack Engineer at Keppel, Singapore</span>
+            <span className="text-[#915EFF]">Full-Stack Engineer at Seatrium, Singapore</span>
           </p>
         </div>
       </div>

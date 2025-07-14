@@ -11,6 +11,8 @@ import {
   keppel,
   inforge,
   fiveSixtyDegree,
+  seatrium,
+  apar,
   reactNative,
   flutter,
   springBoot,
@@ -116,11 +118,46 @@ const technologies = [
 const experiences = [
   {
     title: "Full Stack Engineer",
+    company_name: "APAR Technologies",
+    country: "Singapore",
+    icon: apar,
+    iconBg: "#383E56",
+    date: "Jun 2025 - Present",
+    points: [
+      "Designing and developing scalable web and mobile applications using React.js and React Native.",
+      "Creating and consuming REST APIs using Node.js, ensuring efficient backend logic and seamless integration with frontend applications.",
+      "Working with MS SQL Server, writing optimized queries, stored procedures, and managing database performance.",
+      "Proficient in designing high-level database architectures and data models to support scalability, performance, and maintainability.",
+      "Implementing secure authentication and authorization flows, including JWT-based auth, session management, and role-based access control.",
+      "Utilizing AWS services such as S3 for secure object storage, API Gateway for routing API requests, and EC2 for scalable backend deployments.",
+      "Implementing CI/CD pipelines for automated testing, builds, and deployments to AWS infrastructure.",
+      "Creating responsive and interactive UI/UX designs to ensure seamless user experiences across web and mobile platforms."
+    ]    
+  },
+  {
+    title: "Full Stack Engineer",
+    company_name: "Seatrium Limited",
+    country: "Singapore",
+    icon: seatrium,
+    iconBg: "#383E56",
+    date: "Aug 2024 - Jun 2025",
+    points: [
+      "Designing and developing scalable web and mobile applications using React.js and React Native.",
+      "Creating and consuming REST APIs using Node.js, ensuring efficient backend logic and seamless integration with frontend applications.",
+      "Working with MS SQL Server, writing optimized queries, stored procedures, and managing database performance.",
+      "Utilizing AWS services such as S3 for secure storage, EC2 for scalable backend deployment, and API Gateway for managing REST API routing.",
+      "Implementing CI/CD pipelines to deploy full-stack applications to AWS EC2 instances with high availability.",
+      "Built and deployed the NAGA4 Rig Monitoring Application, leveraging sensor data for real-time rig performance tracking, telemetry visualization, and system alerts.",
+      "Implementing responsive and interactive UI/UX designs to enhance user experience across web and mobile platforms."
+    ]    
+  },
+  {
+    title: "Full Stack Engineer",
     company_name: "Keppel Corporation Limited",
     country: "Singapore",
     icon: keppel,
     iconBg: "#383E56",
-    date: "Dec 2022 - Present",
+    date: "Dec 2022 - Aug 2024",
     points: [
       "Designing and developing scalable web and mobile applications using React.js and React Native.",
       "Creating and consuming REST APIs using Node.js, ensuring efficient backend logic and seamless integration with frontend applications.",

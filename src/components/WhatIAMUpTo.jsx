@@ -21,11 +21,10 @@ const WhatIAMUpTo = () => {
                 </h5>
                 <ul className="list-disc marker:text-[#915EFF] pl-5 max-h-[300px] overflow-y-auto">
                     <li>
-                        Developing Harvest Hub App – Building an app for farmers to manage their expenses and workflow efficiently. Enhancing AI capabilities to provide smart prompts and assist with decision-making.
+                        Currently developing a comprehensive Freight Tracking System application to streamline logistics and shipment visibility.
                     </li>
                     <li>
-                        Exploring RAG for Harvest Hub – Researching and implementing Retrieval-Augmented Generation (RAG) to enhance AI-driven insights and decision-making for farmers.
-                    </li>
+                        Providing ongoing support and enhancements for the Warranty Management System application, ensuring optimal performance and user experience.                    </li>
                     <li>
                         Working on Naga4 (Office Project) – Contributing as a full-stack developer, handling everything from frontend development to cloud infrastructure.
                     </li>
